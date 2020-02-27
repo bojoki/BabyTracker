@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>An easy way to keep track of important events in the life of baby</h1>
+        <label for="fname">Child's name:</label>
+        <input type="text" v-model="child" id="fname">
+        <button v-on:click="addTime('eat')">Eat</button>
+        <button @click="addTime('sleep')">Sleep</button>
+        <ul>
+            <li v-for="time in printTimes">
+                <label>{{ child }} {{ time }}</label>
+            </li>
+        </ul>
+        <button @click="clearData()">Clear Entries</button>
+    </div>
+    <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+    <script src ="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/script.js"></script>
+</body>
