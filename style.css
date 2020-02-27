@@ -5,6 +5,12 @@ body {
     background: #f3f3f3;
 }
 
+#app {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
 /* List */
 
 ul {
@@ -22,6 +28,7 @@ li {
     align-items: center;
 }
 
+
 .delete {
     display: none;
     margin-left: auto;
@@ -31,8 +38,9 @@ li:hover .delete {
     display: block;
 }
 
-label {
+ul li label {
     width: 400px;
+    font-size: 20px;
 }
 
 .completed {

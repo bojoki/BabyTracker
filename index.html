@@ -13,7 +13,9 @@
                 <label>{{ child }} {{ time }}</label>
             </li>
         </ul>
-        <button @click="clearData()">Clear Entries</button>
+        <button @click="clearEntries()">Clear Entries</button>
+        <button @click="clearName()">Clear Name</button>
+        <button @click="clearAll()">Clear All</button>
     </div>
     <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
     <script src ="https://momentjs.com/downloads/moment.js"></script>

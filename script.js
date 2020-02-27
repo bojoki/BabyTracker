@@ -27,8 +27,14 @@ var app = new Vue({
             console.log(this.times);
             // this.$cookies.set("newKey1", this.times[0]);
         },
-        clearData() {
+        clearAll() {
             this.times = [];
+            this.child ='';
+        },
+        clearEntries() {
+            this.times = [];
+        },
+        clearName() {
             this.child ='';
         }
     },
