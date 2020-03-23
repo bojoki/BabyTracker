@@ -1,7 +1,7 @@
 body {
     font-family: 'Arvo';
     font-size: 16px;
-    padding: 20px 100px 0px 100px;
+    padding: 20px 20px;
     background: #f3f3f3;
 }
 
@@ -15,17 +15,20 @@ body {
 
 ul {
     list-style: none;
+    /* why am i overlapping 20px on end? */
+    padding-inline-start: 20px;
+    padding-inline-end: 40px;
 }
 
 li {
     background: #fff;
-    width: 500px;
+    width: 100%;
     min-height: 30px;
     padding: 10px;
     margin-bottom: 10px;
     font-size: 1em;
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    text-align: center;
 }
 
 
@@ -61,6 +64,10 @@ input[type=text] {
 button {
     font-family: 'Arvo';
     font-size: 1em;
+}
+
+#history {
+    /* display: none; */
 }
 
 /* Controls */

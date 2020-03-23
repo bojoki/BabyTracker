@@ -6,8 +6,9 @@
         <h1>An easy way to keep track of important events in the life of baby</h1>
         <label for="fname">Child's name:</label>
         <input type="text" v-model="child" id="fname">
-        <button v-on:click="addTime('eat')">Eat</button>
-        <button @click="addTime('sleep')">Sleep</button>
+        <button v-on:click="addTime('ate')">Eat</button>
+        <button @click="addTime('slept')">Sleep</button>
+        <button @click="addTime('woke up')">Wake</button>
         <ul>
             <li v-for="time in printTimes">
                 <label>{{ child }} {{ time }}</label>
@@ -16,6 +17,13 @@
         <button @click="clearEntries()">Clear Entries</button>
         <button @click="clearName()">Clear Name</button>
         <button @click="clearAll()">Clear All</button>
+        <button @click="clearHistory()">Clear History</button>
+        <button @click="viewHistory()">Toggle History</button>
+        <ul id="history">
+            <li v-for="day in printHistory">
+                <label> {{day}} </label>
+            </li>
+        </ul>
     </div>
     <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
     <script src ="https://momentjs.com/downloads/moment.js"></script>
